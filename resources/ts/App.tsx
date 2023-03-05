@@ -1,17 +1,11 @@
-import {
-    useMutation,
-    QueryClient,
-    QueryClientProvider,
-} from "@tanstack/react-query";
-
+import { useState } from "react";
+import Footer from "./components/layouts/footer/Footer";
+import Navbar from "./components/layouts/header/Navbar";
 export default function App(): JSX.Element {
-    const queryClient = new QueryClient();
-
-    return (
-        <>
-            <QueryClientProvider client={queryClient}>
-                <div className="text-gray-400">Test</div>
-            </QueryClientProvider>
-        </>
-    );
+  return (
+    <>
+      <Navbar />
+      <Footer />
+    </>
+  );
 }

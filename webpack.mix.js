@@ -8,9 +8,11 @@ mix.ts("resources/ts/main.tsx", "public/js")
         postCss: [tailwindcss("./tailwind.config.js")],
     });
 
-// mix.options({
-//     hmrOptions: {
-//         host: "http://127.0.0.1",
-//         port: 8000,
-//     },
-// });
+mix.webpackConfig({
+    devServer: {
+        // proxy設定
+        proxy: {
+            "*": "http://localhost:8000",
+        },
+    },
+});
