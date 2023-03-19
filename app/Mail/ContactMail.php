@@ -50,7 +50,7 @@ class ContactMail extends Mailable
                 'email'   => request()->email,
                 'name'    => request()->name,
                 'subject' => request()->subject,
-                'body'    => request()->body,
+                'body'    => request()->message,
             ],
         );
     }
