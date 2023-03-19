@@ -4300,11 +4300,11 @@ exports.SKILLS = [{
     file: "ts",
     name: "TypeScript"
   }, {
+    file: "react",
+    name: "React"
+  }, {
     file: "vue",
     name: "Vue.js"
-  }, {
-    file: "react",
-    name: "React.js"
   }, {
     file: "jquery",
     name: "jQuery"
