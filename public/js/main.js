@@ -3407,10 +3407,10 @@ var Section_1 = __importDefault(__webpack_require__(/*! @/components/layouts/con
 var FieldWrapper_1 = __importDefault(__webpack_require__(/*! @/components/forms/FieldWrapper */ "./resources/ts/components/forms/FieldWrapper.tsx"));
 var styles_1 = __webpack_require__(/*! ../styles */ "./resources/ts/features/contact/styles.ts");
 var defaultValues = {
-  name: "test_name",
-  email: "finom.kokaji.aszu@gmail.com",
-  subject: "test_subject",
-  message: "test_message"
+  name: "",
+  email: "",
+  subject: "",
+  message: ""
 };
 function Contact() {
   var _ref = (0, react_1.useState)(null),

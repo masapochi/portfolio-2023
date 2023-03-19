@@ -12,10 +12,10 @@ import FieldWrapper from "@/components/forms/FieldWrapper";
 import { contactCss } from "../styles";
 
 const defaultValues = {
-  name: "test_name",
-  email: "finom.kokaji.aszu@gmail.com",
-  subject: "test_subject",
-  message: "test_message",
+  name: "",
+  email: "",
+  subject: "",
+  message: "",
 };
 
 type StatusType = "SENDING" | "SUCCESS" | "ERROR" | null;
