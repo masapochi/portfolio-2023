@@ -19,10 +19,11 @@
   <meta name="twitter:image" content="{{ asset('images/ogp.jpg') }}">
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+
   <link href="{{ asset('/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
   <script src="{{ mix('js/main.js') }}" defer></script>
 </head>

@@ -1,0 +1,100 @@
+// .overlay {
+//     position: fixed;
+//     width: 100vw;
+//     height: 100vh;
+//     background-color: rgba(0, 0, 0, .75);
+//     z-index: 999;
+//     place-content: center;
+//     overflow: hidden;
+//     clip-path: circle(0%);
+//     backdrop-filter: blur(10px);
+//     transition: clip-path .8s;
+
+//     &.open {
+//         clip-path: circle(100%);
+//     }
+
+//     .container {
+//         display: flex;
+//         flex-direction: column;
+//         max-width: $max-container-width-wide;
+//     }
+// }
+
+// .global-menu {
+//     position: relative;
+//     width: 100%;
+//     height: calc(100vh - var(--header-height));
+// }
+
+// .global-menu__list {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     align-items: center;
+//     height: calc(100% - var(--header-height));
+// }
+
+// .global-menu__item {
+//     @include clamp('font-size', 2.2rem, 3.5vw, 4rem);
+//     text-align: center;
+
+//     &:before {
+//         display: none;
+//     }
+
+//     &.-sns {
+//         display: flex;
+//         @include clamp('font-size', 1.4rem, 3.5vw, 2rem);
+//     }
+// }
+
+// .global-menu__link {
+//     display: block;
+//     @include clamp('padding', 1.8rem, 3.5vh, 2rem);
+//     color: $color-base;
+
+//     @include hover {
+//         @include gradient-text();
+//     }
+
+// }
+
+// .header {
+//     position: fixed;
+//     z-index: 10;
+//     top: 0;
+//     width: 100%;
+//     transition: $transition;
+
+//     .container {
+//         display: flex;
+//         align-items: center;
+//         justify-content: space-between;
+//         height: var(--header-height);
+//         max-width: $max-container-width-wide;
+//     }
+// }
+
+// .toggler {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     @include toggler-button-size;
+//     cursor: pointer;
+
+//     &.-close {
+//         margin-left: auto;
+//         z-index: 100;
+//     }
+// }
+
+// .toggler__icon {
+//     @include toggler-icon-size;
+// }
+
+// .overlay.fixed {
+//     .toggler.-open {
+//         display: none;
+//     }
+// }

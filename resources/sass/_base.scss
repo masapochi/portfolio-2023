@@ -1,0 +1,172 @@
+/*  import google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+Pro:wght@200;300;400;500;600;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    position: relative;
+    overflow-x: hidden;
+    width: 100%;
+    font-family: $font-family-base;
+    color: $color-base;
+    font-weight: $font-weight-base;
+    letter-spacing: $letter-spacing-base;
+    line-height: 1.5;
+    @include clamp('font-size', 1.6rem, 5vw, 1.8rem);
+    background-color: #1f1f1f;
+    color: white;
+
+    &.fixed {
+        overflow: hidden;
+    }
+}
+
+h1 {
+    @include clamp('font-size', 4.0rem, 5vw, 8.0rem);
+    font-weight: $font-weight-bold;
+}
+
+h2 {
+    @include clamp('font-size', 1.8rem, 5vw, 3.0rem);
+    font-weight: $font-weight-bold;
+}
+
+h3 {
+    @include clamp('font-size', 1.8rem, 5vw, 2.0rem);
+    font-weight: $font-weight-bold;
+}
+
+p {
+    @include clamp('font-size', 1.6rem, 5vw, 1.8rem);
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: $max-container-width;
+    margin: 0 auto;
+
+    @include clamp('padding-left', 1.8rem, 4vw, 8.0rem);
+    @include clamp('padding-right', 1.8rem, 4vw, 8.0rem);
+
+    @media (min-width: $lg) {
+        display: flex;
+    }
+}
+
+// .section {
+//     position: relative;
+//     min-height: 100vh;
+//     border-bottom: 1px solid lighten(#1a1a1a, 7%);
+
+//     &:before {
+//         content: "";
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         height: 100%;
+//         background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQoU2PMycmRmjJlyjMGPACkhhGfAmS5UYV4Q4qR2AAHAO4bCseUOLDoAAAAAElFTkSuQmCC) repeat;
+//     }
+
+//     &:nth-child(odd):not(.home) {
+//         background-color: $bg-base;
+//     }
+
+//     &:nth-child(even):not(.home) {
+//         background-color: $bg-light;
+//     }
+
+//     .container {
+//         padding-top: var(--header-height);
+//         padding-bottom: var(--header-height);
+//         min-height: 100vh;
+//     }
+// }
+
+// .section__head,
+// .section__body {
+//     @media (min-width: $lg) {
+//         height: auto;
+//         @include clamp('padding', 3.2rem, 5vw, 4.2rem);
+
+//     }
+// }
+
+// .section__head {
+//     text-align: center;
+
+//     @media (min-width: $lg) {
+//         padding-top: 10vh;
+//         width: 36%;
+//         text-align: left;
+//         position: relative;
+
+//     }
+// }
+
+// .section-head__inner {
+//     @media (min-width: $lg) {
+//         position: sticky;
+//         top: 0;
+//     }
+// }
+
+// .section__body {
+//     @media (min-width: $lg) {
+//         width: 64%;
+//     }
+// }
+
+// .section__title,
+// .section__subtitle {
+//     margin: 0;
+//     text-align: center;
+//     white-space: nowrap;
+
+//     @media (min-width: $lg) {
+
+//         text-align: left;
+//     }
+// }
+
+// .section__title {
+//     @include gradient-text();
+//     font-weight: 500;
+// }
+
+// .section__subtitle {
+//     position: relative;
+//     display: inline-block;
+//     margin-bottom: 6vh;
+//     color: $color-light;
+//     font-weight: 300;
+//     transition: $transition;
+// }
+
+.sns-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 0.4rem;
+    vertical-align: bottom;
+}
+
+.cta {
+    @include button;
+    @include hover;
+}

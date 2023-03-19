@@ -1,0 +1,49 @@
+$xs: 0;
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+
+$max-container-width: 1480px;
+$max-container-width-wide: 1680px;
+
+$color-light: #e6e6e6;
+$color-base: #ccc;
+$color-dark: #b3b3b3;
+$color-darker: #404040;
+$color-accent: crimson;
+$color-success: forestgreen;
+$color-failure: orange;
+
+$font-family-base: "Source Sans Pro",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino",
+    "BIZ UDPGothic",
+    "Meiryo",
+    "Helvetica Neue",
+    "Arial",
+    sans-serif;
+$font-weight-base: 300;
+$font-weight-bold: 400;
+$font-weight-bolder: 500;
+
+$letter-spacing-base: 0.05em;
+
+$bg-base: #1a1a1a;
+$bg-light: lighten($bg-base, 2%);
+$bg-footer: darken(#1a1a1a, 2%);
+
+$transition: all .3s ease;
+$box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+    rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+
+
+
+:root {
+    --header-height: 6rem;
+
+    @media (min-width: $md) {
+        --header-height: 7rem;
+    }
+}

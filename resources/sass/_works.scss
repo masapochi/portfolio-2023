@@ -1,0 +1,50 @@
+.works {
+  // background-color: $bg-works;
+}
+
+
+.work {
+  flex: 0 0 85%;
+  cursor: pointer;
+  transition: $transition;
+  overflow: hidden;
+  color: $color-base;
+
+  &:not(:last-child) {
+    margin-bottom: 8%;
+    border-bottom: 1px solid $color-darker;
+  }
+}
+
+.work__image {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+
+}
+
+.work__body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: auto;
+  padding: 4% 2% 8%;
+  white-space: normal;
+  word-break: break-word;
+
+}
+
+.work__title {
+  margin: 0 0 2%;
+}
+
+.work__desc {
+  margin: 0 0 6%;
+}
+
+.work__btn {
+  align-self: center;
+  @include button();
+  padding: .6rem 1.8rem;
+
+}

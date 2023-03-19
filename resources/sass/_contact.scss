@@ -1,0 +1,71 @@
+// .contact {
+//   // background-color: $bg-contact;
+// }
+
+// .contact-form {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+// }
+
+// .contact-form__field {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   margin-bottom: 2.5vh;
+//   text-align: left;
+// }
+
+// .contact-form__label {
+//   margin-bottom: 1vh;
+// }
+
+// .contact-form__input {
+//   outline: none;
+//   padding: 1.2rem 1.6rem;
+//   font-size: 1.8rem;
+//   transition: $transition;
+//   resize: vertical;
+//   letter-spacing: $letter-spacing-base;
+//   border: none;
+//   border-bottom: 1px solid #f0f0f0;
+//   background-color: #dedede;
+
+//   &:focus {
+//     background-color: #fff;
+//   }
+// }
+// .cta.-contact {
+//   @include button {
+//     margin-top: 2.5vh;
+//   }
+// }
+
+// .error-message {
+//   display: none;
+// }
+
+// .is-invalid+.error-message {
+//   display: block;
+//   color: $color-failure;
+// }
+
+// .alert {
+//   width: 100%;
+//   margin-bottom: 5vh;
+//   padding: 1.6rem;
+//   border-width: 2px;
+//   border-style: solid;
+//   border-radius: 6px;
+//   text-align: center;
+
+//   &.-success {
+//     border-color: $color-success;
+//     color: $color-success;
+//   }
+
+//   &.-failure {
+//     border-color: $color-failure;
+//     color: $color-failure;
+//   }
+// }

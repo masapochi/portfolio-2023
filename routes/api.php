@@ -1,6 +1,8 @@
 <?php
 
+use App\Mail\ContactMail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +16,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+Route::post('/contact', function () {
+    try {
+        Mail::to(request()->email)
+            ->bcc(config('mail.from.address'))
+            ->send(new ContactMail);
+
+        return response()->json([
+            'message' => 'mail sending successed.'
+        ], 200);
+    } catch (\Exception $e) {
+        dump($e->getMessage());
+        return response()->json([
+            'message' => 'mail sending failed.'
+        ], 500);
+    }
 });

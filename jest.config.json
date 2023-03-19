@@ -1,16 +1,25 @@
 {
-  "roots": [
-    "<rootDir>/resources/ts"
-  ],
-  "testMatch": [
-    "**/__tests__/**/*.+(ts|tsx|js)",
-    "**/?(*.)+(spec|test).+(ts|tsx|js)"
-  ],
-  "transform": {
-    "^.+\\.(ts|tsx)$": "ts-jest"
-  },
-  "testEnvironment": "jest-environment-jsdom",
-  "setupFilesAfterEnv": [
-    "<rootDir>/jest.setup.ts"
-  ]
+    "roots": [
+        "<rootDir>/resources/ts"
+    ],
+    "testMatch": [
+        "**/__tests__/**/*.+(ts|tsx|js|jsx)",
+        "**/?(*.)+(spec|test).+(ts|tsx|js|jsx)"
+    ],
+    "transform": {
+        "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testEnvironment": "jest-environment-jsdom",
+    "setupFilesAfterEnv": [
+        "<rootDir>/jest.setup.ts",
+        "<rootDir>/resources/ts/mocks/setupTests.ts"
+    ],
+    "type": "module",
+    "moduleDirectories": [
+        "node_modules",
+        "src"
+    ],
+    "moduleNameMapper": {
+        "@/(.*)": "<rootDir>/resources/ts/$1"
+    }
 }

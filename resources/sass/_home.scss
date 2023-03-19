@@ -1,0 +1,191 @@
+.home {
+  height: 100vh;
+  min-height: unset;
+
+  @media (max-width: 767px) and (min-height: 736px) {
+    height: 88vh;
+  }
+
+  @media (max-width: 767px) and (min-height: 812px) {
+    height: 80vh;
+  }
+
+  .container {
+    position: relative;
+    z-index: 0;
+    height: 100%;
+    max-width: 100%;
+  }
+}
+
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-bg__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: translate(-50%, -50%);
+  filter: blur(2px);
+}
+
+.hero-bg:after {
+  position: absolute;
+  display: block;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .7);
+}
+
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: var(--header-height) 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero__main {
+  font-family: "Libre Baskerville", serif;
+  width: 100%;
+  margin-top: 16vh;
+  margin-bottom: 6vh;
+  padding-bottom: 2vh;
+  border-bottom: 1px solid #aaa;
+
+  @media (min-width: $md) {
+    align-self: flex-start;
+    width: auto;
+    margin-top: 16vh;
+    margin-bottom: 6vh;
+  }
+
+  @media (min-width: $lg) {
+    margin-top: 12vh;
+  }
+
+  @media (min-width: $xxl) {
+    margin-top: 16vh;
+    padding-left: 8vw;
+  }
+
+}
+
+.hero-main__small,
+.hero-main__large {
+  padding: 0 4vw;
+  white-space: nowrap;
+  text-align: center;
+
+  @media (min-width: $md) {
+    padding: 0 8vw;
+  }
+
+}
+
+.hero-main__small {
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  font-weight: $font-weight-base;
+  display: block;
+
+  @media (min-width: $md) {
+    padding: 0 8.5vw;
+  }
+
+  @media (min-width: $lg) {
+    text-align: left;
+  }
+}
+
+.hero-main__large {
+  display: block;
+  font-size: clamp(2.6rem, 8vw, 8.8rem);
+  font-weight: $font-weight-bolder;
+}
+
+
+.hero__sub {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: auto;
+
+  @media (min-width: $md) {
+    align-self: flex-start;
+  }
+
+  @media (min-width: $lg) {
+    width: 90%;
+  }
+
+  @media (min-width: $xl) {
+    width: 85%;
+    margin-bottom: 12vh;
+  }
+
+  @media (min-width: $xxl) {
+    width: 75%;
+    margin-bottom: 12vh;
+  }
+}
+
+.hero-sub__line {
+  height: clamp(1.8rem, 3.5vw, 2.4rem);
+  width: 20vw;
+  margin-right: 3vw;
+  background-color: rgba(255, 255, 255, .2);
+
+  @media (min-width: $md) {
+    width: 24vw;
+  }
+}
+
+.hero-sub__desc {
+  position: relative;
+  word-break: break-word;
+  margin: 0;
+  padding-right: 3vw;
+  font-size: clamp(1.4rem, 2.5vw, 2.4rem);
+}
+
+.cta.-hero {
+  @include button;
+  margin-bottom: 8vh;
+
+  @include hover {
+    background-color: #fff;
+    box-shadow: none;
+  }
+
+  @media (min-width: $md) {
+    margin-bottom: 14vh;
+  }
+
+  @media (min-width: $lg) {
+    margin-bottom: 8vh;
+  }
+
+  @media (min-width: $xl) {
+    align-self: flex-start;
+    margin: 0 0 auto 8vw;
+  }
+
+  @media (min-width: $xxl) {
+    margin: 0 0 auto 16.5vw;
+  }
+}

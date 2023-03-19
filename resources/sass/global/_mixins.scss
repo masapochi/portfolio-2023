@@ -1,0 +1,126 @@
+@mixin clamp($property, $min-size, $scaler, $max-size, $min-size-left: false, $scaler-left: false, $max-size-left: false) {
+  @if $min-size-left==false {
+    // For Old Browser
+    #{$property}: $max-size;
+    // For Browsers that are not compatible with Clamp function.
+    #{$property}:#{"min(max(#{$min-size},#{$scaler}),#{$max-size})"};
+    // For Modern Browsers
+    #{$property}: #{"clamp(#{$min-size}, #{$scaler}, #{$max-size})"};
+  }
+
+  @else if $min-size-left==0 or $min-size-left==auto {
+    // For Old Browser
+    #{$property}: $max-size $min-size-left;
+    // For Browsers that are not compatible with Clamp function.
+    #{$property}: #{"min(max(#{$min-size},#{$scaler}),#{$max-size})"} $min-size-left;
+    // For Modern Browsers
+    #{$property}: #{"clamp(#{$min-size}, #{$scaler}, #{$max-size})"} $min-size-left;
+  }
+
+  @else {
+    // For Old Browser
+    #{$property}: $max-size $min-size-left;
+    // For Browsers that are not compatible with Clamp function.
+    #{$property}:#{"min(max(#{$min-size},#{$scaler}),#{$max-size})"} #{"min(max(#{$min-size-left}, #{$scaler-left}), #{$max-size-left})"};
+    // For Modern Browsers
+    #{$property}: #{"clamp(#{$min-size-left}, #{$scaler-left}, #{$max-size-left})"};
+  }
+  @if $property == 'font-size' {
+    min-height: 0vw;
+  }
+}
+
+@mixin gradient-bg($deg: 145deg) {
+  background-color: darken(#d6ae7b, 16%) ;
+  background-image: linear-gradient(145deg, darken(#d6ae7b, 16%) 0%, darken(#eacda3, 16%) 72%);
+}
+
+@mixin gradient-text() {
+  @include gradient-bg($deg: -180deg);
+
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+@mixin hover() {
+  &:hover, &:active {
+    @content;
+  }
+}
+@mixin button() {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+
+  display: inline-block;
+  padding : clamp(0.8rem, 3vw, 1.8rem) clamp(1.6rem, 3vw, 3.6rem);
+  // background: linear-gradient(270deg, #f06449, #ef3636);
+  @include gradient-bg();
+
+  // border: 1.5px solid #5E4CB2;
+  color: #fff;
+  box-shadow: $box-shadow;
+  white-space: nowrap;
+  letter-spacing: $letter-spacing-base;
+  font-family: $font-family-base;
+  @include clamp('font-size', 2rem, 5vw, 2.4rem);
+  @content;
+}
+
+@mixin toggler-button-size() {
+  @include clamp('width', 6rem, 5vw, 7rem);
+  @include clamp('height', 6rem, 5vw, 7rem);
+  @content;
+}
+@mixin toggler-icon-size() {
+  @include clamp('width', 2.4rem, 5vw, 3.2rem);
+  height: auto;
+  object-fit: cover;
+}
+@mixin gotop-button-size() {
+  @include clamp('width', 4.4rem, 5vw, 5.6rem);
+  @include clamp('height', 4.4rem, 5vw, 5.6rem);
+  @content;
+}
+@mixin gotop-icon-size() {
+  @include clamp('width', 2.4rem, 5vw, 3.2rem);
+  height: auto;
+  object-fit: cover;
+}
+
+
+@mixin absolute($t:auto, $b:auto, $l:auto, $r:auto, $z: auto) {
+  $vertical: auto;
+  $horizontal: auto;
+
+  position: absolute;
+
+  @if $t !=auto {
+    top: $t;
+    $vertical: - $t;
+  }
+
+  @if $b !=auto {
+    bottom: $b;
+    $vertical: - $b;
+  }
+
+  @if $l !=auto {
+    left: $l;
+    $horizontal: - $l;
+  }
+
+  @if $r !=auto {
+    right: $r;
+    $horizontal: - $r;
+  }
+
+  z-index: $z;
+  transform: translate($horizontal, $vertical);
+}

@@ -1,49 +1,145 @@
+/** @jsxImportSource @emotion/react */
+import { css } from "@emotion/react";
+
+import { SetStateAction } from "react";
+import { mqMore } from "@/styles/mediaQueries";
+
+const togglerCss = css({
+  position: "fixed",
+  zIndex: 999,
+  top: "1rem",
+  right: "1rem",
+  [mqMore("xl")]: {
+    top: "2rem",
+    right: "2rem",
+  },
+});
+
 type TogglerProps = {
-  isNavbarOpen: boolean;
-  setIsNavbarOpen: (value: React.SetStateAction<boolean>) => void;
+  isOpen: boolean;
+  setIsOpen: (value: SetStateAction<boolean>) => void;
 };
+
 export default function Toggler({
-  isNavbarOpen,
-  setIsNavbarOpen,
+  isOpen,
+  setIsOpen,
 }: TogglerProps): JSX.Element {
   return (
-    <>
-      <div className="md:hidden">
-        <button
-          className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-          onClick={() => setIsNavbarOpen(!isNavbarOpen)}
-        >
-          {isNavbarOpen ? (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
-              viewBox="0 0 20 20"
-              fill="currentColor"
+    <span css={togglerCss} className="toggler" id="js-toggle-open">
+      <button onClick={() => setIsOpen(!isOpen)}>
+        {isOpen ? (
+          <svg
+            data-testid="toggler-close"
+            className="toggler__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g
+              id="Group_14"
+              data-name="Group 14"
+              transform="translate(-764 -31)"
             >
-              <path
-                fillRule="evenodd"
-                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                clipRule="evenodd"
+              <g
+                id="Group_13"
+                data-name="Group 13"
+                transform="translate(74.5 -46.5)"
+              >
+                <g
+                  id="Group_12"
+                  data-name="Group 12"
+                  transform="translate(693.5 81.5)"
+                >
+                  <line
+                    id="Line_8"
+                    data-name="Line 8"
+                    x1="16.485"
+                    y1="16"
+                    fill="none"
+                    stroke="#fff"
+                    strokeWidth="1"
+                  />
+                  <line
+                    id="Line_12"
+                    data-name="Line 12"
+                    x1="16.485"
+                    y2="16"
+                    fill="none"
+                    stroke="#fff"
+                    strokeWidth="1"
+                  />
+                </g>
+              </g>
+              <rect
+                id="Rectangle_20"
+                data-name="Rectangle 20"
+                width="24"
+                height="24"
+                transform="translate(764 31)"
+                fill="none"
               />
-            </svg>
-          ) : (
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              className="w-6 h-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2}
+            </g>
+          </svg>
+        ) : (
+          <svg
+            data-testid="toggler-open"
+            className="toggler__icon"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g
+              id="Group_15"
+              data-name="Group 15"
+              transform="translate(-786 -33)"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M4 6h16M4 12h16M4 18h16"
+              <g
+                id="Group_11"
+                data-name="Group 11"
+                transform="translate(51.5 -48.5)"
+              >
+                <line
+                  id="Line_9"
+                  data-name="Line 9"
+                  x2="24"
+                  transform="translate(734.5 85.5)"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth="1"
+                />
+                <line
+                  id="Line_10"
+                  data-name="Line 10"
+                  x2="24"
+                  transform="translate(734.5 93.5)"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth="1"
+                />
+                <line
+                  id="Line_11"
+                  data-name="Line 11"
+                  x2="24"
+                  transform="translate(734.5 101.5)"
+                  fill="none"
+                  stroke="#fff"
+                  strokeWidth="1"
+                />
+              </g>
+              <rect
+                id="Rectangle_21"
+                data-name="Rectangle 21"
+                width="24"
+                height="24"
+                transform="translate(786 33)"
+                fill="none"
               />
-            </svg>
-          )}
-        </button>
-      </div>
-    </>
+            </g>
+          </svg>
+        )}
+      </button>
+    </span>
   );
 }
