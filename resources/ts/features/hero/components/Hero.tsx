@@ -64,9 +64,9 @@ export function Hero(): JSX.Element {
           </p>
         </div>
 
-        <a css={[button, heroCss.cta]} ref={ctaRef}>
+        {/* <a css={[button, heroCss.cta]} ref={ctaRef}>
           Browse Works
-        </a>
+        </a> */}
       </div>
     </section>
   );

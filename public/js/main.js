@@ -3667,8 +3667,6 @@ Object.defineProperty(exports, "__esModule", ({
 }));
 exports.Hero = void 0;
 var jsx_runtime_1 = __webpack_require__(/*! @emotion/react/jsx-runtime */ "./node_modules/@emotion/react/jsx-runtime/dist/emotion-react-jsx-runtime.browser.esm.js");
-/** @jsxImportSource @emotion/react */
-var buttonStyle_1 = __webpack_require__(/*! @/styles/buttonStyle */ "./resources/ts/styles/buttonStyle.ts");
 var gsap_1 = __webpack_require__(/*! gsap */ "./node_modules/gsap/index.js");
 var react_1 = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 var styles_1 = __webpack_require__(/*! ../styles */ "./resources/ts/features/hero/styles.ts");
@@ -3744,7 +3742,7 @@ function Hero() {
           css: [styles_1.heroCss.title, styles_1.heroCss.large],
           ref: largeRef
         }, {
-          children: "Beautiy in the Code"
+          children: "Beauty in the Code"
         }))]
       })), (0, jsx_runtime_1.jsxs)("div", Object.assign({
         css: styles_1.heroCss.sub
@@ -3759,11 +3757,6 @@ function Hero() {
         }, {
           children: "Readable code enhances usability, productivity and maintainability."
         }))]
-      })), (0, jsx_runtime_1.jsx)("a", Object.assign({
-        css: [buttonStyle_1.button, styles_1.heroCss.cta],
-        ref: ctaRef
-      }, {
-        children: "Browse Works"
       }))]
     }))]
   }));
@@ -3874,7 +3867,7 @@ exports.heroCss = {
   main: (0, react_1.css)((_ref = {
     fontFamily: '"Libre Baskerville", serif',
     position: "absolute",
-    top: "18vh",
+    top: "30vh",
     borderBottom: "1px solid #aaa"
   }, _defineProperty(_ref, (0, mediaQueries_1.mqMore)("md"), {
     top: "20vh"
@@ -3921,7 +3914,7 @@ exports.heroCss = {
   }), _ref4)),
   sub: (0, react_1.css)((_ref5 = {
     position: "absolute",
-    top: "39vh",
+    top: "50vh",
     display: "flex",
     alignItems: "center"
   }, _defineProperty(_ref5, (0, mediaQueries_1.mqMore)("md"), {

@@ -50,7 +50,7 @@ export const heroCss = {
     main: css({
         fontFamily: '"Libre Baskerville", serif',
         position: "absolute",
-        top: "18vh",
+        top: "30vh",
         borderBottom: "1px solid #aaa",
         [mqMore("md")]: {
             top: "20vh",
@@ -108,7 +108,7 @@ export const heroCss = {
 
     sub: css({
         position: "absolute",
-        top: "39vh",
+        top: "50vh",
         display: "flex",
         alignItems: "center",
         [mqMore("md")]: { top: "42vh" },
