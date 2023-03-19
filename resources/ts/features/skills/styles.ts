@@ -24,6 +24,7 @@ export const skillCss = {
         gap: "0.8rem",
     }),
     image: css({
+        flex: 1,
         display: "block",
         width: "80%",
         [mqMore("md")]: {
@@ -34,6 +35,7 @@ export const skillCss = {
         },
     }),
     label: css({
+        marginTop: "auto",
         fontSize: "0.85rem",
         [mqMore("md")]: {
             fontSize: "1rem",

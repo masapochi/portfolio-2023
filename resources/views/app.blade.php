@@ -20,8 +20,7 @@
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
-  <link href="{{ asset('/favicon.ico') }}" rel="shortcut icon" type="image/x-icon">
-
+  <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">

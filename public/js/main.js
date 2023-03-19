@@ -4297,13 +4297,13 @@ exports.SKILLS = [{
     file: "js",
     name: "JavaScript"
   }, {
-    file: "js",
+    file: "ts",
     name: "TypeScript"
   }, {
     file: "vue",
     name: "Vue.js"
   }, {
-    file: "vue",
+    file: "react",
     name: "React.js"
   }, {
     file: "jquery",
@@ -4323,9 +4323,6 @@ exports.SKILLS = [{
   }, {
     file: "python",
     name: "Python"
-  }, {
-    file: "flask",
-    name: "Flask"
   }, {
     file: "sql",
     name: "SQL"
@@ -4415,6 +4412,7 @@ exports.skillCss = {
     gap: "0.8rem"
   }),
   image: (0, react_1.css)((_ref2 = {
+    flex: 1,
     display: "block",
     width: "80%"
   }, _defineProperty(_ref2, (0, mediaQueries_1.mqMore)("md"), {
@@ -4423,6 +4421,7 @@ exports.skillCss = {
     width: "50%"
   }), _ref2)),
   label: (0, react_1.css)(_defineProperty({
+    marginTop: "auto",
     fontSize: "0.85rem"
   }, (0, mediaQueries_1.mqMore)("md"), {
     fontSize: "1rem"
