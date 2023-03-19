@@ -53,7 +53,7 @@ export function Hero(): JSX.Element {
             I'm loving
           </span>
           <span css={[heroCss.title, heroCss.large]} ref={largeRef}>
-            Beautiy in the Code
+            Beauty in the Code
           </span>
         </h1>
 
