@@ -7,6 +7,7 @@ export const WORKS = [
         tags: [
             "Laravel",
             "Laravel Mix",
+            "TypeScript",
             "React",
             "React Hook Form",
             "Zod",
@@ -18,6 +19,23 @@ export const WORKS = [
             {
                 label: "Github",
                 href: "https://github.com/masapochi/portfolio-2023",
+            },
+        ],
+    },
+    {
+        label: "Thumbs Game",
+        desc: "みんな知っているけれど、名前はだれも知らないあの親指ゲームです。",
+        image: "images/works/thumbs-game.png",
+        fallback_image: "images/works/thumbs-game.png",
+        tags: ["TypeScript", "React", "Vite", "Tailwind Css"],
+        links: [
+            {
+                label: "Live",
+                href: "https://masapochi.me/thumbs-game/",
+            },
+            {
+                label: "Github",
+                href: "https://github.com/masapochi/thumbs-game/",
             },
         ],
     },
@@ -35,23 +53,6 @@ export const WORKS = [
     //         {
     //             label: "Github",
     //             href: "https://github.com/masapochi/products-catalog/",
-    //         },
-    //     ],
-    // },
-    // {
-    //     label: "Thumbs Game",
-    //     desc: "みんな知っているけれど、名前はだれも知らないあの親指ゲームです。",
-    //     image: "images/works/that_game.webp",
-    //     fallback_image: "images/works/that_game.png",
-    //     tags: ["Vue.js", "PWA"],
-    //     links: [
-    //         {
-    //             label: "Live",
-    //             href: "https://masapochi.me/that-game/",
-    //         },
-    //         {
-    //             label: "Github",
-    //             href: "https://github.com/masapochi/that-game/",
     //         },
     //     ],
     // },
