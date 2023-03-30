@@ -4610,25 +4610,20 @@ exports.WORKS = [{
     label: "Github",
     href: "https://github.com/masapochi/thumbs-game/"
   }]
-}
-// {
-//     label: "Catalog Demo",
-//     desc: "ダミーテキストを利用した仮想の商品カタログです。カテゴリ・キーワードで商品を検索できます。",
-//     image: "images/works/catalog.webp",
-//     fallback_image: "images/works/catalog.jpg",
-//     tags: ["Laravel", "GSAP", "SQLite", "Bootstrap"],
-//     links: [
-//         {
-//             label: "Live",
-//             href: "https://masapochi.me/catalog/",
-//         },
-//         {
-//             label: "Github",
-//             href: "https://github.com/masapochi/products-catalog/",
-//         },
-//     ],
-// },
-];
+}, {
+  label: "Memory Game",
+  desc: "いわゆる神経衰弱です。",
+  image: "images/works/memory-game.png",
+  fallback_image: "images/works/memory-game.jpg",
+  tags: ["TypeScript", "React", "Vite", "Tailwind Css"],
+  links: [{
+    label: "Live",
+    href: "https://masapochi.me/memory-game/"
+  }, {
+    label: "Github",
+    href: "https://github.com/masapochi/memory-game/"
+  }]
+}];
 
 /***/ }),
 
