@@ -82,13 +82,6 @@ export function Works(): JSX.Element {
             <div>
               <h3 css={workCss.label}>{work.label}</h3>
               <p css={workCss.desc}>{work.desc}</p>
-              <div css={workCss.tags}>
-                {work.tags.map((tag, j) => (
-                  <span key={j} css={workCss.tag}>
-                    {tag}
-                  </span>
-                ))}
-              </div>
               <div css={workCss.links}>
                 {work.links.map((link, j) => (
                   <a
@@ -100,6 +93,13 @@ export function Works(): JSX.Element {
                   >
                     <span>{link.label}</span>
                   </a>
+                ))}
+              </div>
+              <div css={workCss.tags}>
+                {work.tags.map((tag, j) => (
+                  <span key={j} css={workCss.tag}>
+                    {tag}
+                  </span>
                 ))}
               </div>
             </div>

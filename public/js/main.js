@@ -4539,16 +4539,6 @@ function Works() {
             }, {
               children: work.desc
             })), (0, jsx_runtime_1.jsx)("div", Object.assign({
-              css: workCss.tags
-            }, {
-              children: work.tags.map(function (tag, j) {
-                return (0, jsx_runtime_1.jsx)("span", Object.assign({
-                  css: workCss.tag
-                }, {
-                  children: tag
-                }), j);
-              })
-            })), (0, jsx_runtime_1.jsx)("div", Object.assign({
               css: workCss.links
             }, {
               children: work.links.map(function (link, j) {
@@ -4561,6 +4551,16 @@ function Works() {
                   children: (0, jsx_runtime_1.jsx)("span", {
                     children: link.label
                   })
+                }), j);
+              })
+            })), (0, jsx_runtime_1.jsx)("div", Object.assign({
+              css: workCss.tags
+            }, {
+              children: work.tags.map(function (tag, j) {
+                return (0, jsx_runtime_1.jsx)("span", Object.assign({
+                  css: workCss.tag
+                }, {
+                  children: tag
                 }), j);
               })
             }))]
