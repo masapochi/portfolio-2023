@@ -4598,6 +4598,19 @@ exports.WORKS = [{
     href: "https://github.com/masapochi/portfolio-2023"
   }]
 }, {
+  label: "Sample Product Catalog",
+  desc: "「Lorem Ipsum」を使った、ダミーの商品カタログです。",
+  image: "images/works/product-catalog.png",
+  fallback_image: "images/works/product-catalog.png",
+  tags: ["Laravel", "Bootstrap"],
+  links: [{
+    label: "Live",
+    href: "https://masapochi.me/product-catalog/"
+  }, {
+    label: "Github",
+    href: "https://github.com/masapochi/product-catalog/"
+  }]
+}, {
   label: "Thumbs Game",
   desc: "みんな知っているけれど、名前はだれも知らないあの親指ゲームです。",
   image: "images/works/thumbs-game.png",
